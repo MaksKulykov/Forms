@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Login } from '../models/login';
+import { AuthService } from '../auth-service.service';
 
 @Component({
   selector: 'app-login',
@@ -9,11 +10,22 @@ import { Login } from '../models/login';
 })
 export class LoginComponent implements OnInit {
   login: Login;
+  isValid: boolean;
+  routerLink;
 
-  constructor() { }
+  constructor(
+    private authService: AuthService
+  ) { }
 
   ngOnInit() {
     this.login = {userEmail: '', userPassword: ''};
+    this.isValid = false;
   }
-
+  checkLogin(): void {
+    this.isValid = this.authService.checkLogin(this.login);
+    this.changeRouterLink();
+  }
+  changeRouterLink(): void {
+    this.isValid === true ? this.routerLink = '/pay' : this.routerLink = '/login';
+  }
 }
