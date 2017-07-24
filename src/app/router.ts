@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { LoginComponent } from './login/login.component';
 import { PayPhoneComponent } from './pay-phone/pay-phone.component';
+import { EndComponent } from './end/end.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'pay',
     component: PayPhoneComponent
+  },
+  {
+    path: 'end',
+    component: EndComponent
   },
   {
     path: '',

@@ -1,3 +1,81 @@
-<p>
-  pay-phone works!
-</p>
+<form #payForm="ngForm">
+  <div class="card">
+    <div class="form-header">
+      <h4 class="title">Заполните форму</h4>
+    </div>
+    <div class="form-body">
+      +380<input type="text" class="phone-number" name="phone" required [(ngModel)]="pay.phone" pattern="[0-9]{9}" placeholder="Номер телефона"
+                 #phoneRef="ngModel" maxlength="9">
+      <div [hidden]="phoneRef.valid || phoneRef.pristine"
+           class="error-message">
+        Не верный номер телефона
+      </div>
+      <input type="text" class="card-number" placeholder="Сумма пополнения (от 5 до 5000)">
+      <input type="email" class="card-number" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Введите ваш Email"
+             required [(ngModel)]="pay.userEmail" name="userEmail"
+             #userEmailRef="ngModel">
+      <div [hidden]="userEmailRef.valid || userEmailRef.pristine"
+           class="error-message">
+        Не верный Email
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="form-header">
+      <h4 class="title">Информация о карте</h4>
+    </div>
+    <div class="form-body">
+      <input type="text" class="phone-number" name="cardNumber" required [(ngModel)]="pay.cardNumber" pattern="[0-9]{16}" placeholder="Номер карты"
+                 #cardNumberRef="ngModel" maxlength="16">
+      <div [hidden]="cardNumberRef.valid || cardNumberRef.pristine"
+           class="error-message">
+        Не верный номер карты
+      </div>
+      <div class="date-field">
+        <div class="month">
+          <select name="Month">
+            <option value="january">January</option>
+            <option value="february">February</option>
+            <option value="march">March</option>
+            <option value="april">April</option>
+            <option value="may">May</option>
+            <option value="june">June</option>
+            <option value="july">July</option>
+            <option value="august">August</option>
+            <option value="september">September</option>
+            <option value="october">October</option>
+            <option value="november">November</option>
+            <option value="december">December</option>
+          </select>
+        </div>
+        <div class="year">
+          <select name="Year">
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+          </select>
+        </div>
+      </div>
+      <div class="card-verification">
+        <div class="cvv-input">
+          <input type="text" class="phone-number" name="cvv" required [(ngModel)]="pay.cvv" pattern="[0-9]{3,4}" placeholder="CVV"
+                 #cvvRef="ngModel" maxlength="4">
+          <div [hidden]="cvvRef.valid || cvvRef.pristine"
+               class="error-message">
+            Не верный CVV
+          </div>
+        </div>
+        <div class="cvv-details" >
+          3 or 4 digits usually found<br> on the signature strip
+        </div>
+      </div>
+      <button type="submit" class="proceed-btn" [disabled]="!payForm.form.valid" routerLink="/end" routerLinkActive="active">Proceed
+      </button>
+    </div>
+  </div>
+</form>

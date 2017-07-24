@@ -1,8 +1,8 @@
-<div>
-  <h1>Вход</h1>
+<div class="login-card">
+  <h2>Вход</h2>
   <form #loginForm="ngForm">
     <div>
-      <h2>Адрес электронной почты</h2>
+      <h3>Адрес электронной почты</h3>
       <label for="email"></label>
       <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Введите ваш Email"
              required [(ngModel)]="login.userEmail" name="userEmail"
@@ -13,7 +13,7 @@
       </div>
     </div>
     <div>
-      <h2>Пароль</h2>
+      <h3>Пароль</h3>
       <label for="password"></label>
       <input type="password" id="password" pattern="(?=.*\d)(?=.*[A-Z]).{10,}" placeholder="Введите пароль"
              required [(ngModel)]="login.userPassword" name="userPassword"
@@ -23,7 +23,7 @@
         Не верный пароль. Пароль должен включать не менее 10 символов, как минимум 1 букву в верхнем регистре и 1 цифру.
       </div>
     </div>
-    <button type="submit" [disabled]="!loginForm.form.valid" routerLink="pay" routerLinkActive="active">Submit</button>
-    <button type="button" (click)="loginForm.reset()">Reset</button>
+    <button type="submit" [disabled]="!loginForm.form.valid" routerLink="/pay" routerLinkActive="active">Войти</button>
+    <button type="button" (click)="loginForm.reset()">Сброс</button>
   </form>
 </div>
