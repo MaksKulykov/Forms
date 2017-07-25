@@ -19,7 +19,6 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.login = {userEmail: '', userPassword: ''};
-    this.isValid = false;
   }
   checkLogin(): void {
     this.isValid = this.authService.checkLogin(this.login);

@@ -8,7 +8,7 @@
                  #phoneRef="ngModel" maxlength="9">
       <div [hidden]="phoneRef.valid || phoneRef.pristine"
            class="error-message">
-        Не верный номер телефона
+        {{msg.msgPhone}}
       </div>
       <input type="text" class="card-number" placeholder="Сумма пополнения (от 5 до 5000)">
       <input type="email" class="card-number" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Введите ваш Email"
@@ -16,7 +16,7 @@
              #userEmailRef="ngModel">
       <div [hidden]="userEmailRef.valid || userEmailRef.pristine"
            class="error-message">
-        Не верный Email
+        {{msg.msgEmail}}
       </div>
     </div>
   </div>
@@ -25,11 +25,11 @@
       <h4 class="title">Информация о карте</h4>
     </div>
     <div class="form-body">
-      <input type="text" class="phone-number" name="cardNumber" required [(ngModel)]="pay.cardNumber" pattern="[0-9]{16}" placeholder="Номер карты"
+      <input type="text" class="card-number" name="cardNumber" required [(ngModel)]="pay.cardNumber" pattern="[0-9]{16}" placeholder="Номер карты"
                  #cardNumberRef="ngModel" maxlength="16">
       <div [hidden]="cardNumberRef.valid || cardNumberRef.pristine"
            class="error-message">
-        Не верный номер карты
+        {{msg.msgCardNumber}}
       </div>
       <div class="date-field">
         <div class="month">
@@ -65,17 +65,18 @@
         <div class="cvv-input">
           <input type="text" class="phone-number" name="cvv" required [(ngModel)]="pay.cvv" pattern="[0-9]{3,4}" placeholder="CVV"
                  #cvvRef="ngModel" maxlength="4">
-          <div [hidden]="cvvRef.valid || cvvRef.pristine"
-               class="error-message">
-            Не верный CVV
-          </div>
         </div>
         <div class="cvv-details" >
           3 or 4 digits usually found<br> on the signature strip
         </div>
+        <div [hidden]="cvvRef.valid || cvvRef.pristine"
+             class="error-message">
+          {{msg.msgCVV}}
+        </div>
       </div>
-      <button type="submit" class="proceed-btn" [disabled]="!payForm.form.valid" routerLink="/end" routerLinkActive="active">Proceed
+      <button type="submit" class="proceed-btn" [disabled]="!payForm.form.valid" routerLink="/end" routerLinkActive="active">Оплатить
       </button>
+      <button type="button" (click)="payForm.reset()">Сброс</button>
     </div>
   </div>
 </form>

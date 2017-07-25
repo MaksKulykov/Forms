@@ -26,7 +26,7 @@
     <button type="submit" [routerLink]="routerLink" routerLinkActive="active" (click)="checkLogin()">Войти</button>
     <button type="button" (click)="loginForm.reset()">Сброс</button>
   </form>
-  <div [hidden]="!isValid"
+  <div *ngIf="isValid === false"
        class="error-message">
     Вход не будет выполнен. Не верный Email или пароль.
   </div>
