@@ -12,12 +12,10 @@ const AppConfig = new InjectionToken('app.config');
   providers: [{provide: AppConfig, useValue: CONFIG }]
 })
 export class PayPhoneComponent {
-  pay: Pay = {phone: '', price: '', userEmail: '', cardNumber: '', month: '', year: '', cvv: ''};
+  pay: Pay = new Pay();
   msg: any;
 
   constructor (@Inject(AppConfig) config: any) {
     this.msg = config;
   }
-
-
 }
