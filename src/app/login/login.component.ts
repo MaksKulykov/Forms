@@ -12,7 +12,6 @@ import { AuthService } from '../auth-service.service';
 export class LoginComponent implements OnInit {
   login: Login;
   isValid: boolean;
-  routerLink;
 
   constructor(
     private authService: AuthService,

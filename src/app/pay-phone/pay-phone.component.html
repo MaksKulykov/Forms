@@ -63,11 +63,11 @@
       </div>
       <div class="card-verification">
         <div class="cvv-input">
-          <input type="text" class="phone-number" name="cvv" required [(ngModel)]="pay.cvv" pattern="[0-9]{3,4}" placeholder="CVV"
-                 #cvvRef="ngModel" maxlength="4">
+          <input type="text" class="phone-number" name="cvv" required [(ngModel)]="pay.cvv" pattern="[0-9]{3}" placeholder="CVV"
+                 #cvvRef="ngModel" maxlength="3">
         </div>
         <div class="cvv-details" >
-          3 or 4 digits usually found<br> on the signature strip
+          3 знака обычно находятся<br> на сигнальной полосе
         </div>
         <div [hidden]="cvvRef.valid || cvvRef.pristine"
              class="error-message">
