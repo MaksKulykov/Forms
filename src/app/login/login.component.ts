@@ -10,8 +10,6 @@ import { Login } from '../models/login';
 export class LoginComponent implements OnInit {
   login: Login;
 
-  constructor() { }
-
   ngOnInit() {
     this.login = new Login();
   }
