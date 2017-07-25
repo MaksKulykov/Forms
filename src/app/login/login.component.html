@@ -6,28 +6,18 @@
       <label for="email"></label>
       <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Введите ваш Email"
              required [(ngModel)]="login.userEmail" name="userEmail">
-             <!--#userEmailRef="ngModel">
-      <div [hidden]="userEmailRef.valid || userEmailRef.pristine"
-           class="error-message">
-        Не верный Email
-      </div>-->
     </div>
     <div>
       <h3>Пароль</h3>
       <label for="password"></label>
       <input type="password" id="password" pattern="(?=.*\d)(?=.*[A-Z]).{10,}" placeholder="Введите пароль"
              required [(ngModel)]="login.userPassword" name="userPassword">
-             <!--#userPasswordRef="ngModel">
-      <div [hidden]="userPasswordRef.valid || userPasswordRef.pristine"
-           class="error-message">
-        Не верный пароль. Пароль должен включать не менее 10 символов, как минимум 1 букву в верхнем регистре и 1 цифру.
-      </div>-->
     </div>
     <button type="submit" (click)="checkLogin()">Войти</button>
     <button type="button" (click)="loginForm.reset()">Сброс</button>
   </form>
   <div *ngIf="isValid === false"
        class="error-message">
-    Вход не будет выполнен. Не верный Email или пароль.
+    Вход не будет выполнен. Не верный Email и/или пароль.
   </div>
 </div>
