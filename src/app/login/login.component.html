@@ -23,7 +23,7 @@
         Не верный пароль. Пароль должен включать не менее 10 символов, как минимум 1 букву в верхнем регистре и 1 цифру.
       </div>-->
     </div>
-    <button type="submit" [routerLink]="routerLink" routerLinkActive="active" (click)="checkLogin()">Войти</button>
+    <button type="submit" (click)="checkLogin()">Войти</button>
     <button type="button" (click)="loginForm.reset()">Сброс</button>
   </form>
   <div *ngIf="isValid === false"

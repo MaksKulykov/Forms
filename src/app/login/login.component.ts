@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Login } from '../models/login';
 import { AuthService } from '../auth-service.service';
@@ -14,7 +15,8 @@ export class LoginComponent implements OnInit {
   routerLink;
 
   constructor(
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -22,9 +24,11 @@ export class LoginComponent implements OnInit {
   }
   checkLogin(): void {
     this.isValid = this.authService.checkLogin(this.login);
-    this.changeRouterLink();
+    this.goToPay();
   }
-  changeRouterLink(): void {
-    this.isValid === true ? this.routerLink = '/pay' : this.routerLink = '/login';
+  goToPay(): void {
+    if (this.isValid) {
+      this.router.navigate(['/pay']);
+    }
   }
 }
