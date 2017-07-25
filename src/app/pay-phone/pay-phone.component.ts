@@ -8,9 +8,6 @@ import { Pay } from '../models/pay';
   styleUrls: ['./pay-phone.component.css']
 })
 export class PayPhoneComponent {
-  pay: Pay = {phone: '', price: '', userEmail: '', cardNumber: '', month: '', year: '', cvv: ''};
-
-  constructor() {}
-
+  pay: Pay = new Pay();
 
 }

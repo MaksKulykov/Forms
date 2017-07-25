@@ -1,9 +1,9 @@
 export class Pay {
-  phone: string;
-  price: string;
-  userEmail: string;
-  cardNumber: string;
-  month: string;
-  year: string;
-  cvv: string;
+  phone: any = '';
+  price: any = '';
+  userEmail: any = '';
+  cardNumber: any = '';
+  month: any = '';
+  year: any = '';
+  cvv: any = '';
 }
