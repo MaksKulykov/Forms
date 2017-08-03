@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./end.component.css']
 })
 export class EndComponent {
-  msg: any = 'Ваша операция прошла успешно!';
 }
