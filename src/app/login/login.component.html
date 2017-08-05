@@ -1,0 +1,23 @@
+<div class="login-card">
+  <h2>Вход</h2>
+  <form #loginForm="ngForm">
+    <div>
+      <h3>Адрес электронной почты</h3>
+      <label for="email"></label>
+      <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Введите ваш Email"
+             required [(ngModel)]="login.userEmail" name="userEmail">
+    </div>
+    <div>
+      <h3>Пароль</h3>
+      <label for="password"></label>
+      <input type="password" id="password" pattern="(?=.*\d)(?=.*[A-Z]).{10,}" placeholder="Введите пароль"
+             required [(ngModel)]="login.userPassword" name="userPassword">
+    </div>
+    <button type="submit" (click)="checkLogin()">Войти</button>
+    <button type="button" (click)="loginForm.reset()">Сброс</button>
+  </form>
+  <div *ngIf="isValid === false"
+       class="error-message">
+    Вход не будет выполнен. Не верный Email и/или пароль.
+  </div>
+</div>
