@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="6765b4c916060f6bc42d9bb69e80377dbcb5e4e9" datatype="html">
+        <source>Login</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\login\login.component.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\login\login.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ab74fc8dba8edad651407e20f87b1b124f532906" datatype="html">
+        <source>E-mail address</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\login\login.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="742b5effcdf50f93b47b3cb8f073fd67ab77981b" datatype="html">
+        <source>Incorrect E-mail</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\login\login.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\pay-phone\pay-phone.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c32ef07f8803a223a83ed17024b38e8d82292407" datatype="html">
+        <source>Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\login\login.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1a3b9df0102590296f774acfff9482ca06dea858" datatype="html">
+        <source>Incorrect password. The password must include at least 10 characters, at least 1 letter in upper case and 1 digit.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\login\login.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="06c663bf1474713f57551123a46b34318543b67d" datatype="html">
+        <source>Reset</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\login\login.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="959a03cfa9d120f72c209364d7ba951ca6091b68" datatype="html">
+        <source>Fill the form</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\pay-phone\pay-phone.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ed3b8ec6f55a1278cd50dd0cee8c3331a0f8a789" datatype="html">
+        <source>Wrong phone number</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\pay-phone\pay-phone.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5c8444c50bc6f12f1061a6739eaf4fdec9c2ddff" datatype="html">
+        <source>Card information</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\pay-phone\pay-phone.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="34970a9cd62c9dfb0895dd9d4bb0691aba2ba111" datatype="html">
+        <source>Incorrect card number</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\pay-phone\pay-phone.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9f3e06f30355dc1c8909b4aedc7a985a793ff32d" datatype="html">
+        <source>Incorrect CVV</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\pay-phone\pay-phone.component.ts</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b5e1b0d8b1c3fe4937d9ff8c2bd00c5d68f589eb" datatype="html">
+        <source>Proceed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\pay-phone\pay-phone.component.ts</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e6ab0077b13f680c39417a834d0d045eaca811b3" datatype="html">
+        <source>
+  Your operation was successful!
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app\end\end.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
