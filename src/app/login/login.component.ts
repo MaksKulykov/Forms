@@ -22,12 +22,15 @@ export class LoginComponent implements OnInit {
     this.login = new Login();
   }
   checkLogin(): void {
-    this.isValid = this.authService.checkLogin(this.login);
-    this.goToPay();
+    this.authService.checkLogin(this.login)
+      .subscribe((status: boolean) => {
+        this.isValid = status;
+        if (status) {
+          this.goToPay();
+        }
+      });
   }
   goToPay(): void {
-    if (this.isValid) {
-      this.router.navigate(['/pay']);
-    }
+    this.router.navigate(['/pay']);
   }
 }
